@@ -1,0 +1,48 @@
+.btn-carousel {
+    background-color: #07294d;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .btn-carousel:hover {
+    background-color: white;
+    color: #07294d;
+  }
+
+  .banner-title {
+    font-weight: 700;
+  }
+
+
+@media only screen and (max-width: 992px) {
+    .btn-carousel {
+        padding: 8px 20px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .banner-title {
+        font-size: 18px;
+    }
+
+    .banner-text {
+        font-size: 14px;
+        padding-bottom: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+}
+
+  

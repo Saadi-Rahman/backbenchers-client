@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
-import navLogo from '../../../Back9.png';
+import navLogo from '../../../assets/BackLogo.png';
 
 const Header = () => {
     return (
@@ -25,14 +25,14 @@ const Header = () => {
                 </Container>
             </Navbar>
 
-            <nav className="navbar navbar-expand-lg shadow mb-5 bg-body">
+            <nav className="navbar navbar-expand-lg shadow bg-body">
                 <div className="container navbar-wide">
                     <Link className='pb-2' to="/"><img src={navLogo} alt="" width="200px" /></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-wide-items navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-wide-items navbar-nav me-auto mb-2 p-lg-0 mb-lg-0">
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="/home">HOME</NavLink>
                             </li>
