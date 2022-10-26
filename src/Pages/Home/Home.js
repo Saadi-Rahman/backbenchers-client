@@ -5,6 +5,7 @@ import img1 from '../../assets/banner1.jpg';
 import img2 from '../../assets/banner2.jpg';
 import img3 from '../../assets/banner3.png';
 import img4 from '../../assets/banner5.png';
+import Faq from '../Faq/Faq';
 import './Home.css';
 
 const Home = () => {
@@ -74,6 +75,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <Faq></Faq>
         </div>
     );
 };
