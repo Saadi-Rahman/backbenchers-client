@@ -19,7 +19,7 @@ const Login = () => {
                             <Form.Control type="password" name='password' placeholder="Password" required />
                         </Form.Group>
                         <p className='text-success'>Successfully login to the account.</p>
-                        <button className='btn-navy' type='submit'>Login</button>
+                        <button className='btn-navy w-100' type='submit'>Login</button>
                     </Form>
                     <Button variant="light w-100 mt-2" type="submit">Forgot Password?</Button>
                     <p className='mt-2'><small>New to this website? Please <Link to='/register'>Register</Link> </small></p>
