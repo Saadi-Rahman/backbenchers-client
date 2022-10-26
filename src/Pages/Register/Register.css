@@ -1,0 +1,13 @@
+.btn-navy {
+    background-color: #033469; 
+    color: white;
+    width: 100%;
+    padding: 8px 20px;
+    font-size: medium;
+    border-radius: 8px;
+}
+
+.btn-navy:hover {
+    background-color: #07294d;
+    color: white;
+}

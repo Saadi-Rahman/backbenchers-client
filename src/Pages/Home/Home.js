@@ -46,7 +46,7 @@ const Home = () => {
                 />
 
                 <Carousel.Caption>
-                <button className='btn-carousel'>Enroll for Free</button>
+                <button className='btn-carousel'>Enroll Now</button>
                 <h1 className='banner-title'>Introduction to CSE and Programming Specialization</h1>
                 <p className='banner-text'>
                     This specialisation covers topics ranging from basic computing principles to the mathematical foundations required for computer science. You will learn fundamental concepts of how computers work, which can be applied to any software or computer system. You will also gain the practical skillset needed to write interactive, graphical programs at an introductory level. 
