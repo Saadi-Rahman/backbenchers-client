@@ -14,6 +14,10 @@ export const routes = createBrowserRouter([
         element: <Main></Main>,
         children: [
             {
+                path: "/",
+                element: <Home></Home>
+              },
+            {
                 path: '/home',
                 element: <Home></Home>
             },
@@ -42,5 +46,14 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             },
         ]
-    }
+    },
+    {
+        path: '*',
+        element: 
+        <div className='d-flex justify-content-center align-items-center flex-column vh-100'>
+          <p className='display-1 fw-bold text-navy'>404</p>
+          <p className='fs-4 fw-bold'>Not Found!</p>
+          <p>Woops!! Looks like this page doesn't exist!</p>
+        </div>
+      }
 ])
