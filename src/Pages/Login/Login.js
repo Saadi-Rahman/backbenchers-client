@@ -2,8 +2,27 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle  } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+
+    const {providerLogin} = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            // navigate(from, {replace: true});
+            // toast.success('Login Success!!');
+        })
+        .catch(error => console.error(error));
+    }
+
     return (
         <div className='container'>
             <div className='row justify-content-center align-items-center mt-5'>
@@ -19,11 +38,10 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" name='password' placeholder="Password" required />
                         </Form.Group>
-                        <p className='text-success'>Successfully login to the account.</p>
                         <button className='btn-navy w-100 mb-1' type='submit'>Login</button>
                     </Form>
                     <hr className="d-inline-block mx-auto w-100" />
-                    <Button variant="outline-primary w-100" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
+                    <Button onClick={handleGoogleSignIn} variant="outline-primary w-100" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
                     <Button variant="outline-dark w-100 mt-2" type="submit"><FaGithub className='me-1' /> Continue with GitHub</Button>
                     <p className='mt-2'><small>New to this website? Please <Link to='/register'>Register</Link> </small></p>
                 </div>

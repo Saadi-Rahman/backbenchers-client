@@ -30,7 +30,6 @@ const Register = () => {
                             <Form.Control type="password" name='password' placeholder="Enter your Password" required />
                         </Form.Group>
                         <p className='text-danger'></p>
-                        <p className='text-success'>User Created Successfully.</p>
                         <button className='btn-navy w-100' type='submit'>Register</button>
                     </Form>
                     <p className='mt-2'><small>Already have an account? Please <Link to='/login'>Login</Link></small></p>
