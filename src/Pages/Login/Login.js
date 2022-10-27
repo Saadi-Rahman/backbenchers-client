@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle  } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
@@ -8,7 +8,8 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const {providerLogin} = useContext(AuthContext);
+    const { signIn, providerLogin} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -23,11 +24,33 @@ const Login = () => {
         .catch(error => console.error(error));
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        signIn(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+            navigate('/');
+            // setError('');
+            // navigate(from, {replace: true});
+            // toast.success('Login Success!!');
+        })
+        .catch(error => {
+            console.error(error);
+            // setError(error.message);
+        })
+    }
+
     return (
         <div className='container'>
             <div className='row justify-content-center align-items-center mt-5'>
                 <div className='col-md-4 shadow border rounded p-5'>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                         <h3 className='text-navy fw-bold'>Please Login!!</h3>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>

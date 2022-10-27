@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Register.css';
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, photoURL, email, password);
+
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            // setError('');
+            form.reset();
+            // Navigate('/');
+            // handleUpdateUserProfile(name, photoURL);
+            // toast.success('Registration Success!!');
+        })
+        .catch(error => {
+            console.error(error);
+            // setError(error.message);
+        });
+    }
+
     return (
         <div className='container'>
             <div className='row justify-content-center align-items-center mt-5'>
                 <div className='col-md-4 shadow border rounded p-5'>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                         <h3 className='text-navy fw-bold'>Register here!</h3>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label>User Name</Form.Label>
