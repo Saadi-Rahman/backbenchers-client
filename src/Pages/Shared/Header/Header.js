@@ -70,7 +70,7 @@ const Header = () => {
                                             <Tooltip {...props}>{user?.displayName}</Tooltip>
                                             )}
                                             placement="bottom"
-                                            ><Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="img"></Image>
+                                            ><Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="user"></Image>
                                         </OverlayTrigger>
                                         <OverlayTrigger
                                             delay={{ hide: 400, show: 200 }}

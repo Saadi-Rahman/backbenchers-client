@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle  } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-
+    const [error, setError] = useState('');
     const { signIn, providerLogin} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -18,7 +21,7 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            // navigate(from, {replace: true});
+            navigate(from, {replace: true});
             // toast.success('Login Success!!');
         })
         .catch(error => console.error(error));
@@ -36,13 +39,13 @@ const Login = () => {
             console.log(user);
             form.reset();
             navigate('/');
-            // setError('');
-            // navigate(from, {replace: true});
+            setError('');
+            navigate(from, {replace: true});
             // toast.success('Login Success!!');
         })
         .catch(error => {
             console.error(error);
-            // setError(error.message);
+            setError(error.message);
         })
     }
 
@@ -63,6 +66,7 @@ const Login = () => {
                         </Form.Group>
                         <button className='btn-navy w-100 mb-1' type='submit'>Login</button>
                     </Form>
+                    <p className='text-danger'>{error}</p>
                     <hr className="d-inline-block mx-auto w-100" />
                     <Button onClick={handleGoogleSignIn} variant="outline-primary w-100" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
                     <Button variant="outline-dark w-100 mt-2" type="submit"><FaGithub className='me-1' /> Continue with GitHub</Button>

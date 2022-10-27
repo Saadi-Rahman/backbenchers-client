@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import './Course.css';
 
 const Course = () => {
@@ -23,7 +23,7 @@ const Course = () => {
                             <h6>Price:</h6>
                             <p className='mb-0'>{course.author?.name}</p>
                             <p>{course.author?.published_date}</p>
-                            <button className='btn-navy py-1'>Premium Access</button>
+                            <Link to="/checkout" className='btn-navy py-2 text-decoration-none'>Premium Access</Link>
                         </div>
                     </div>
                 </div>

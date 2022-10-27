@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Register.css';
 
 const Register = () => {
-
+    const [error, setError] = useState('');
+    // const [accepted, setAccepted] = useState(false);
     const { createUser } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
@@ -21,15 +22,15 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            // setError('');
+            setError('');
             form.reset();
-            // Navigate('/');
+            Navigate('/');
             // handleUpdateUserProfile(name, photoURL);
             // toast.success('Registration Success!!');
         })
         .catch(error => {
             console.error(error);
-            // setError(error.message);
+            setError(error.message);
         });
     }
 
@@ -58,7 +59,7 @@ const Register = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" name='password' placeholder="Enter your Password" required />
                         </Form.Group>
-                        <p className='text-danger'></p>
+                        <p className='text-danger'>{error}</p>
                         <button className='btn-navy w-100' type='submit'>Register</button>
                     </Form>
                     <p className='mt-2'><small>Already have an account? Please <Link to='/login'>Login</Link></small></p>
