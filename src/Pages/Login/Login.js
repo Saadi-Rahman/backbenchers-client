@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaGoogle  } from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -19,9 +20,11 @@ const Login = () => {
                             <Form.Control type="password" name='password' placeholder="Password" required />
                         </Form.Group>
                         <p className='text-success'>Successfully login to the account.</p>
-                        <button className='btn-navy w-100' type='submit'>Login</button>
+                        <button className='btn-navy w-100 mb-1' type='submit'>Login</button>
                     </Form>
-                    <Button variant="light w-100 mt-2" type="submit">Forgot Password?</Button>
+                    <hr className="d-inline-block mx-auto w-100" />
+                    <Button variant="outline-primary w-100" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
+                    <Button variant="outline-dark w-100 mt-2" type="submit"><FaGithub className='me-1' /> Continue with GitHub</Button>
                     <p className='mt-2'><small>New to this website? Please <Link to='/register'>Register</Link> </small></p>
                 </div>
             </div>

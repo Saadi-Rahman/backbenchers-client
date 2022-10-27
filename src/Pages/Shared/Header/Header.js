@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
+import { FaMoon, FaUser } from "react-icons/fa";
 import './Header.css';
 import navLogo from '../../../assets/BackLogo.png';
 
@@ -10,7 +11,7 @@ const Header = () => {
         <div>
             <Navbar className='base-color navbar-thin'>
                 <Container>
-                    <Navbar.Text className='text-light'>
+                    <Navbar.Text className='text-light ms-3'>
                         backbenchers@info.com
                     </Navbar.Text>
                     <Navbar.Toggle />
@@ -19,7 +20,10 @@ const Header = () => {
                         <Link className='text-light text-decoration-none me-4' to="/login">Login</Link>
                     </Navbar.Text>
                     <Navbar.Text>
-                        <Link className='text-light text-decoration-none' to="/register">Register</Link>
+                        <Link className='text-light text-decoration-none me-4' to="/register">Register</Link>
+                    </Navbar.Text>
+                    <Navbar.Text>
+                        <Link className='text-light text-decoration-none me-1'><FaMoon /></Link>
                     </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
@@ -44,6 +48,9 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="blog">BLOG</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-dark pe-0 pt-1" : "nav-link"} to=""><FaUser className='fs-4' /></NavLink>
                             </li>
                         </ul>
                     </div>

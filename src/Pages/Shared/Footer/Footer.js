@@ -1,113 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaEnvelope, FaFacebook, FaGithub, FaGoogle, FaHome, FaInstagram, FaLinkedin, FaPhone, FaPrint, FaTwitter } from "react-icons/fa";
 import './Footer.css';
+import bsIcon from '../../../assets/bs.png';
 
 const Footer = () => {
     return (
-        <div class="container-fluid mx-0 px-0 mt-5">
+        <div className="container-fluid mx-0 px-0 mt-5">
             <footer
-                    class="text-center text-lg-start text-white foot-1"
+                    className="text-center text-lg-start text-white footer-bg-color1"
                     >
                 
                 <section
-                        class="d-flex justify-content-between p-4 base-color"
+                        className="d-flex justify-content-between p-4 base-color"
                         >
                 
-                <div class="me-5">
+                <div className="me-5">
                     <span>Get connected with us on social networks:</span>
                 </div>
                 
                 <div>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-facebook-f"></i>
-                    </Link>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-twitter"></i>
-                    </Link>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-google"></i>
-                    </Link>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-instagram"></i>
-                    </Link>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-linkedin"></i>
-                    </Link>
-                    <Link to="" class="text-white me-4">
-                    <i class="fab fa-github"></i>
-                    </Link>
+                    <Link to="" className="text-white me-4"><FaFacebook /></Link>
+                    <Link to="" className="text-white me-4"><FaTwitter /></Link>
+                    <Link to="" className="text-white me-4"><FaGoogle /></Link>
+                    <Link to="" className="text-white me-4"><FaInstagram /></Link>
+                    <Link to="" className="text-white me-4"><FaLinkedin /></Link>
+                    <Link to="" className="text-white me-4"><FaGithub /></Link>
                 </div>
                 
                 </section>
                 
-                <section class="">
-                <div class="container text-center text-md-start mt-5">
+                <section className="">
+                <div className="container text-center text-md-start mt-5">
                     
-                    <div class="row mt-3">
+                    <div className="row mt-3">
                     
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        
-                        <h6 class="text-uppercase fw-bold">Company name</h6>
-                        <hr
-                            class="mb-4 mt-0 d-inline-block mx-auto foot-2"
-                            />
+                    <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <img src={bsIcon} width="30px" alt="" />
+                        <h6 className="text-uppercase pt-1 fw-bold">BackBenchers'</h6>
+                        <hr className="mb-4 mt-0 d-inline-block mx-auto footer-hr" />
                         <p>
-                        Here you can use rows and columns to organize your footer
-                        content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit.
+                        You don’t get better at swimming by watching others. Coding is no different. Practice as you learn with live code environments with us.
                         </p>
                     </div>
                    
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         
-                        <h6 class="text-uppercase fw-bold">Products</h6>
+                        <h6 className="text-uppercase fw-bold">Products</h6>
                         <hr
-                            class="mb-4 mt-0 d-inline-block mx-auto foot-3"
+                            className="mb-4 mt-0 d-inline-block mx-auto footer-bg-color2"
                             />
                         <p>
-                        <a href="#!" class="text-white">MDBootstrap</a>
+                        <a href="#!" className="text-white">MDBootstrap</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">MDWordPress</a>
+                        <a href="#!" className="text-white">MDWordPress</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">BrandFlow</a>
+                        <a href="#!" className="text-white">BrandFlow</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">Bootstrap Angular</a>
+                        <a href="#!" className="text-white">Bootstrap Angular</a>
                         </p>
                     </div>
                    
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         
-                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <h6 className="text-uppercase fw-bold">Useful links</h6>
                         <hr
-                            class="mb-4 mt-0 d-inline-block mx-auto foot-3"
+                            className="mb-4 mt-0 d-inline-block mx-auto foot-3"
                             />
                         <p>
-                        <a href="#!" class="text-white">Your Account</a>
+                        <a href="#!" className="text-white">Your Account</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">Become an Affiliate</a>
+                        <a href="#!" className="text-white">Become an Affiliate</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">Shipping Rates</a>
+                        <a href="#!" className="text-white">Shipping Rates</a>
                         </p>
                         <p>
-                        <a href="#!" class="text-white">Help</a>
+                        <a href="#!" className="text-white">Help</a>
                         </p>
                     </div>
                     
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         
-                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <h6 className="text-uppercase fw-bold">Contact</h6>
                         <hr
-                            class="mb-4 mt-0 d-inline-block mx-auto foot-3"
+                            className="mb-4 mt-0 d-inline-block mx-auto foot-3"
                             />
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        <p><FaHome className='fs-5 me-2' /> New York, NY 10012, US</p>
+                        <p><FaEnvelope className='fs-5 me-2' /> backbenchers@info.com</p>
+                        <p><FaPhone className='fs-5 me-2' /> + 01 234 567 88</p>
+                        <p><FaPrint className='fs-5 me-2' /> + 01 234 567 89</p>
                     </div>
                     
                     </div>
@@ -115,7 +101,7 @@ const Footer = () => {
                 </div>
                 </section>
                 
-                <div class="text-center p-3 foot-3">
+                <div className="text-center p-3 foot-3">
                     <small>© 2022. All rights reserved by BackBenchers</small>
                 </div>
                 

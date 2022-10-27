@@ -65,7 +65,7 @@ const Home = () => {
                         <p>You don’t get better at swimming by watching others. Coding is no different. Practice as you learn with live code environments inside your browser. Start, switch, or advance your career with more than 500 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
 
                         <div className="my-4">
-                            <Link to="/courses" className="btn btn-navy px-5 py-2">Get Started</Link>
+                            <Link to="/courses" className="btn-navy px-5 py-3 fw-bold text-decoration-none">Get Started</Link>
                         </div>
                     </div>
                     <div className="col-lg-6">

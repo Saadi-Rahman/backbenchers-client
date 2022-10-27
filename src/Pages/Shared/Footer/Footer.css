@@ -1,13 +1,13 @@
-.foot-1 {
+.footer-bg-color1 {
     background-color: #1c2331;
 }
 
-.foot-2 {
-    width: 60px; 
-    background-color: #07294d; 
+.footer-hr {
+    width: 130px; 
+    background-color: #0a3f77; 
     height: 2px;
 }
 
-.foot-3 {
+.footer-bg-color2 {
     background-color: rgba(0, 0, 0, 0.2)
 }

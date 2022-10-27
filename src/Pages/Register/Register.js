@@ -12,17 +12,22 @@ const Register = () => {
                         <h3 className='text-navy fw-bold'>Register here!</h3>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label>User Name</Form.Label>
-                            <Form.Control type="text" name='name' placeholder="Enter Name" required />
+                            <Form.Control type="text" name='name' placeholder="Enter your Name" required />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPhotoURL">
+                            <Form.Label>User PhotoURL</Form.Label>
+                            <Form.Control type="text" name='photoURL' placeholder="Enter your PhotoURL" required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" name='email' placeholder="Enter email" required />
+                            <Form.Control type="email" name='email' placeholder="Enter your email" required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" name='password' placeholder="Password" required />
+                            <Form.Control type="password" name='password' placeholder="Enter your Password" required />
                         </Form.Group>
                         <p className='text-danger'></p>
                         <p className='text-success'>User Created Successfully.</p>
