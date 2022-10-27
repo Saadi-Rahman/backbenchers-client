@@ -5,8 +5,11 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaMoon, FaUser } from "react-icons/fa";
 import './Header.css';
 import navLogo from '../../../assets/BackLogo.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div>
             <Navbar className='base-color navbar-thin'>
@@ -50,6 +53,7 @@ const Header = () => {
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="blog">BLOG</NavLink>
                             </li>
                             <li className="nav-item">
+                                {user?.displayName}
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-dark pe-0 pt-1" : "nav-link"} to=""><FaUser className='fs-4' /></NavLink>
                             </li>
                         </ul>
