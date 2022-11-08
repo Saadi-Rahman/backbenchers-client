@@ -27,17 +27,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/course')
+                loader: () => fetch('https://backbenchers-server.vercel.app/course')
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({params}) => fetch(`https://backbenchers-server.vercel.app/category/${params.id}`)
             },
             {
                 path: '/Course/:id',
                 element: <Course></Course>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({params}) => fetch(`https://backbenchers-server.vercel.app/course/${params.id}`)
             },
             {
                 path: '/checkout',
