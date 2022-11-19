@@ -28,7 +28,12 @@ const Header = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        <Link className='text-light text-decoration-none me-4' to="/login">Login</Link>
+                        {
+                            user?.uid ?
+                            <button onClick={handleLogOut} className="btn-logout">Logout</button>
+                            :
+                            <Link className='text-light text-decoration-none me-4' to="/login">Login</Link>
+                        }
                     </Navbar.Text>
                     <Navbar.Text>
                         <Link className='text-light text-decoration-none me-4' to="/register">Register</Link>
@@ -78,7 +83,7 @@ const Header = () => {
                                             <Tooltip {...props}>Logout</Tooltip>
                                             )}
                                             placement="bottom"
-                                            ><Button onClick={handleLogOut} variant='outline-dark mb-5 mb-lg-0 ms-4'><FaSignOutAlt className='mb-1' /></Button>
+                                            ><Button onClick={handleLogOut} variant='outline-dark mb-lg-0 ms-4'><FaSignOutAlt className='mb-1' /></Button>
                                         </OverlayTrigger>
                                     </>
                                     :
@@ -89,7 +94,7 @@ const Header = () => {
                                             <Tooltip {...props}>User</Tooltip>
                                             )}
                                             placement="bottom"
-                                            ><Button variant="ms-1"><FaUser className='fs-4' /></Button>
+                                            ><Button variant="ms-1 "><FaUser className='fs-4' /></Button>
                                         </OverlayTrigger>
                                         <OverlayTrigger
                                             delay={{ hide: 400, show: 200 }}
@@ -97,7 +102,7 @@ const Header = () => {
                                             <Tooltip {...props}>Login</Tooltip>
                                             )}
                                             placement="bottom"
-                                            ><Link to='/login' className='btn btn-outline-dark  mb-5 mb-lg-0 ms-3'><FaSignInAlt className='mb-1' /></Link>
+                                            ><Link to='/login' className='btn btn-outline-dark mb-lg-0 ms-3'><FaSignInAlt className='mb-1' /></Link>
                                         </OverlayTrigger>
                                     </>
                                 }

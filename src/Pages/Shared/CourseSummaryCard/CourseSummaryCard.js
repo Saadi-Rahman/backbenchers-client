@@ -15,7 +15,7 @@ const CourseSummaryCard = ({course}) => {
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {
-                            details.length > 250 ?
+                            details.length > 100 ?
                             <>{details.slice(0, 100) + '...'} </>
                             :
                             <>{details}</>

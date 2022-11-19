@@ -5,6 +5,7 @@ import { FaGithub, FaGoogle  } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -22,7 +23,7 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             navigate(from, {replace: true});
-            // toast.success('Login Success!!');
+            toast.success('Login Success!!');
         })
         .catch(error => console.error(error));
     }
@@ -41,7 +42,7 @@ const Login = () => {
             navigate('/');
             setError('');
             navigate(from, {replace: true});
-            // toast.success('Login Success!!');
+            toast.success('Login Success!!');
         })
         .catch(error => {
             console.error(error);

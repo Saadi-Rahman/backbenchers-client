@@ -2,6 +2,10 @@
     background-color: #07294d;
 }
 
+.semibase-color {
+    background-color: rgb(12 74 110);
+}
+
 .text-navy {
     color: #07294d;
 }
@@ -28,10 +32,10 @@
     font-weight: 700;
 }
 
-/* .nav-link {
-    padding-bottom: 2px;
-} */
-
-/* .nav-link:focus, .nav-link:hover {
-    color: #07294d;
-} */
+.btn-logout {
+    padding: 0;
+    border: none;
+    margin-right: 24px;
+    background-color: transparent;
+    color: white;
+}

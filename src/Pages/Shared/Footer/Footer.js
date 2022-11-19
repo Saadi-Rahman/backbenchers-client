@@ -68,7 +68,7 @@ const Footer = () => {
                         
                         <h6 className="text-uppercase fw-bold">Useful links</h6>
                         <hr
-                            className="mb-4 mt-0 d-inline-block mx-auto foot-3"
+                            className="mb-4 mt-0 d-inline-block mx-auto footer-bg-color2"
                             />
                         <p>
                         <a href="#!" className="text-white">Your Account</a>
@@ -88,7 +88,7 @@ const Footer = () => {
                         
                         <h6 className="text-uppercase fw-bold">Contact</h6>
                         <hr
-                            className="mb-4 mt-0 d-inline-block mx-auto foot-3"
+                            className="mb-4 mt-0 d-inline-block mx-auto footer-bg-color2"
                             />
                         <p><FaHome className='fs-5 me-2' /> New York, NY 10012, US</p>
                         <p><FaEnvelope className='fs-5 me-2' /> backbenchers@info.com</p>
@@ -101,7 +101,7 @@ const Footer = () => {
                 </div>
                 </section>
                 
-                <div className="text-center p-3 foot-3">
+                <div className="text-center p-3 footer-bg-color2">
                     <small>© 2022. All rights reserved by BackBenchers</small>
                 </div>
                 
