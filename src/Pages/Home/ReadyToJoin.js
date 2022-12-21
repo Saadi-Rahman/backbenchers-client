@@ -5,7 +5,7 @@ import './Home.css';
 const ReadyToJoin = () => {
     return (
         <div>
-            <section className="container-fluid bg-banner-comon px-0 my-5">
+            <section className="container-fluid bg-banner-comon px-0 custom-margin">
                 <div className='mask-comon'>
                     <div className="container py-5">
                         <div className="row">

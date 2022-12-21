@@ -33,6 +33,10 @@
       height: auto;
   }
 
+  .custom-margin {
+    margin: 90px 0 100px 0;
+  }
+
 
 @media only screen and (max-width: 992px) {
     .btn-carousel {
