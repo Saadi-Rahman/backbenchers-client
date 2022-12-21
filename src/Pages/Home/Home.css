@@ -23,6 +23,16 @@
     font-weight: 700;
   }
 
+  .bg-banner-comon {
+    background-image: url('../../assets/banner2.jpg');
+    height: auto;
+  }
+
+  .mask-comon {
+      background-color: rgba(0, 0, 0, 0.353);
+      height: auto;
+  }
+
 
 @media only screen and (max-width: 992px) {
     .btn-carousel {
