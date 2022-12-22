@@ -39,3 +39,7 @@
     background-color: transparent;
     color: white;
 }
+
+.login-btn-mt {
+    margin-top: 2px;
+}

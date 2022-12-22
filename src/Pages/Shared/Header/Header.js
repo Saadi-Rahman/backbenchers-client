@@ -65,46 +65,44 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="blog">BLOG</NavLink>
                             </li>
+                            
+                                {
+                                    user?.uid ?
+                                    <li className='nav-item'>
+                                    <OverlayTrigger
+                                        delay={{ hide: 400, show: 200 }}
+                                        overlay={(props) => (
+                                        <Tooltip {...props}>{user?.displayName}</Tooltip>
+                                        )}
+                                        placement="bottom"
+                                        ><Button variant=""><FaUser className='fs-4' /></Button>
+                                        {/* <Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="user"></Image> */}
+                                    </OverlayTrigger>
+                                    </li>
+                                    :
+                                    <li className='d-none'></li>
+                                }
+                            
                             <li className='nav-item'>
                                 {
                                     user?.uid ?
-                                    <>
-                                        <OverlayTrigger
-                                            delay={{ hide: 400, show: 200 }}
-                                            overlay={(props) => (
-                                            <Tooltip {...props}>{user?.displayName}</Tooltip>
-                                            )}
-                                            placement="bottom"
-                                            ><Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="user"></Image>
-                                        </OverlayTrigger>
-                                        <OverlayTrigger
-                                            delay={{ hide: 400, show: 200 }}
-                                            overlay={(props) => (
-                                            <Tooltip {...props}>Logout</Tooltip>
-                                            )}
-                                            placement="bottom"
-                                            ><Button onClick={handleLogOut} variant='outline-dark mb-lg-0 ms-4'><FaSignOutAlt className='mb-1' /></Button>
-                                        </OverlayTrigger>
-                                    </>
+                                    <OverlayTrigger
+                                        delay={{ hide: 400, show: 200 }}
+                                        overlay={(props) => (
+                                        <Tooltip {...props}>Logout</Tooltip>
+                                        )}
+                                        placement="bottom"
+                                        ><Button onClick={handleLogOut} variant='outline-dark login-btn-mt'><FaSignOutAlt className='mb-1' /></Button>
+                                    </OverlayTrigger>
                                     :
-                                    <>
-                                        <OverlayTrigger
-                                            delay={{ hide: 400, show: 200 }}
-                                            overlay={(props) => (
-                                            <Tooltip {...props}>User</Tooltip>
-                                            )}
-                                            placement="bottom"
-                                            ><Button variant="ms-1 "><FaUser className='fs-4' /></Button>
-                                        </OverlayTrigger>
-                                        <OverlayTrigger
-                                            delay={{ hide: 400, show: 200 }}
-                                            overlay={(props) => (
-                                            <Tooltip {...props}>Login</Tooltip>
-                                            )}
-                                            placement="bottom"
-                                            ><Link to='/login' className='btn btn-outline-dark mb-lg-0 ms-3'><FaSignInAlt className='mb-1' /></Link>
-                                        </OverlayTrigger>
-                                    </>
+                                    <OverlayTrigger
+                                        delay={{ hide: 400, show: 200 }}
+                                        overlay={(props) => (
+                                        <Tooltip {...props}>Login</Tooltip>
+                                        )}
+                                        placement="bottom"
+                                        ><Link to='/login' className='btn btn-outline-dark mt-1'><FaSignInAlt className='mb-1' /></Link>
+                                    </OverlayTrigger>
                                 }
                             </li>
                         </ul>
