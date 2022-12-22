@@ -101,7 +101,7 @@ const Header = () => {
                                         <Tooltip {...props}>Login</Tooltip>
                                         )}
                                         placement="bottom"
-                                        ><Link to='/login' className='btn btn-outline-dark mt-1'><FaSignInAlt className='mb-1' /></Link>
+                                        ><Link to='/login' className='btn btn-outline-dark ms-lg-2 mt-1'><FaSignInAlt className='mb-1' /></Link>
                                     </OverlayTrigger>
                                 }
                             </li>
