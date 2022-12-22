@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Checkout = () => {
     return (
         <div className='container'>
-            <div className='col-lg-8 my-5 p-5 bg-light'>
+            <div className='col-lg-8 my-5 px-3 py-4 p-md-5 bg-light'>
                 <h3>Checkout</h3>
                 <p className='mb-4'>Please checkout to confirm to purchase this course.</p>
                 <form>
@@ -53,7 +53,7 @@ const Checkout = () => {
                         <label className="form-check-label" for="form6Example8">I accept the <Link to="" className='text-decoration-none'>terms & conditions</Link> and I've read the <Link to="" className='text-decoration-none'>privacy policy</Link>.</label>
                     </div>
 
-                    <button type="submit" className="btn btn-primary btn-block mb-4">Place order</button>
+                    <button type="submit" className="btn-navy px-4 py-2 fw-bold">Place order</button>
                 </form>
             </div>
         </div>
